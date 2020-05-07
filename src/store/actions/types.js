@@ -1,6 +1,9 @@
 export const INCREASE = "counter/INCREASE";
 export const DECREASE = "counter/DECREASE";
 
+export const INCREASE_ASYNC = "counter/INCREASE_ASYNC";
+export const DECREASE_ASYNC = "counter/DECREASE_ASYNC";
+
 export const GET_POST = "sample/GET_POST";
 export const GET_POST_SUCCESS = "sample/GET_POST_SUCCESS";
 

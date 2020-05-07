@@ -1,17 +1,8 @@
 import { createAction } from "redux-actions";
-import { INCREASE, DECREASE } from "./types";
+import { INCREASE, DECREASE, INCREASE_ASYNC, DECREASE_ASYNC } from "./types";
 
 export const increase = createAction(INCREASE);
 export const decrease = createAction(DECREASE);
 
-export const increaseAsync = () => (dispatch) => {
-  setTimeout(() => {
-    dispatch(increase());
-  }, 1000);
-};
-
-export const decreaseAsync = () => (dispatch) => {
-  setTimeout(() => {
-    dispatch(decrease());
-  }, 1000);
-};
+export const increaseAsync = createAction(INCREASE_ASYNC, () => undefined);
+export const decreaseAsync = createAction(DECREASE_ASYNC, () => undefined);
